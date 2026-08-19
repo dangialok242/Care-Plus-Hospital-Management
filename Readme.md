@@ -35,6 +35,13 @@ It provides an interactive dashboard for **patient registration, viewing records
 
 # 🖥️ Project Screenshots
 
+## ➕ Sign-up Page
+<p align="center">
+  <img src="Screenshot/Sign up.png" width="700">
+</p>
+
+---
+
 ## 🔐 Login Page
 <p align="center">
   <img src="Screenshot/Login Page.png" width="700">
