@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Care-Plus Hospital</title>
+
+<!-- Font + Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- Link External CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= MODERN HOSPITAL FRONT PAGE / LOGIN ================= -->
+<div id="loginPage">
+  <div class="login-visual">
+    <div class="medical-equipment" aria-hidden="true">
+      <div class="equipment stethoscope"><i class="fa-solid fa-stethoscope"></i></div>
+      <div class="equipment syringe"><i class="fa-solid fa-syringe"></i></div>
+      <div class="equipment pills"><i class="fa-solid fa-pills"></i></div>
+      <div class="equipment ambulance"><i class="fa-solid fa-truck-medical"></i></div>
+      <div class="equipment heart"><i class="fa-solid fa-heart-pulse"></i></div>
+
+      <div class="medical-pulse">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+          <path d="M0 43 L150 43 L175 43 L190 30 L205 43 L250 43 L280 43 L295 12 L308 68 L320 43 L390 43 L450 43 L470 43 L485 32 L500 43 L550 43 L580 43 L595 10 L608 70 L620 43 L700 43 L760 43 L780 43 L795 31 L810 43 L860 43 L890 43 L905 11 L918 69 L930 43 L1000 43 L1060 43 L1080 43 L1095 31 L1110 43 L1200 43"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="visual-content">
+      <div class="brand">
+        <div class="brand-logo"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div class="brand-name">CarePlus Hospital</div>
+      </div>
+
+      <h1>Better care.<br><span>Better health.</span></h1>
+      <p>
+        A simple and secure hospital management platform for handling
+        patient registration, records, search and hospital data efficiently.
+      </p>
+
+      <div class="features">
+        <div class="feature"><i class="fa-solid fa-shield-heart"></i> Secure Records</div>
+        <div class="feature"><i class="fa-solid fa-user-doctor"></i> Patient Care</div>
+        <div class="feature"><i class="fa-solid fa-clock"></i> Fast Management</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-side">
+    <div class="login-card">
+      <div class="top-icon"><i class="fa-solid fa-right-to-bracket"></i></div>
+      <h2>Welcome back</h2>
+      <p class="subtitle">Sign in to access the hospital management dashboard.</p>
+
+      <div class="input-group">
+        <label for="username">USERNAME</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="username" placeholder="Enter username">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">PASSWORD</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" placeholder="Enter password">
+        </div>
+      </div>
+
+      <button class="login-btn" id="loginBtn">
+        Sign In <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <p class="error" id="errorMsg">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        Invalid username or password.
+      </p>
+
+      <p class="login-note">
+        <i class="fa-solid fa-lock"></i> Authorized hospital staff only
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= DASHBOARD ================= -->
+<div id="dashboardSection">
+
+  <header class="topbar">
+    <div class="topbar-brand">
+      <div class="topbar-logo"><i class="fa-solid fa-heart-pulse"></i></div>
+      <span>Care-Plus Hospital Management</span>
+    </div>
+
+    <div class="user-area">
+      <small>Welcome, <strong>Admin</strong></small>
+      <div class="user-badge"><i class="fa-solid fa-user-nurse"></i></div>
+      <button class="logout-btn" id="btnExit">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+      </button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+
+    <div class="welcome">
+      <div>
+        <h1>Hospital Dashboard</h1>
+        <p>Manage patient information and hospital records from one place.</p>
+      </div>
+      <div class="status"><i class="fa-solid fa-circle"></i> System Online</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <i class="fa-solid fa-hospital-user"></i>
+        <strong id="patientCount">0</strong>
+        <span>Total Patients</span>
+      </div>
+      <div class="stat">
+        <i class="fa-solid fa-user-doctor"></i>
+        <strong>24/7</strong>
+        <span>Care Availability</span>
+      </div>
+      <div class="stat">
+        <i class="fa-solid fa-database"></i>
+        <strong>Local</strong>
+        <span>Record Storage</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-user-plus"></i></div>
+        <h3>Add Patient</h3>
+        <p>Register a new patient with personal and medical details.</p>
+        <button class="btn-small" id="btnAdd">Add Patient</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h3>Patient Records</h3>
+        <p>View all patient records currently stored in the system.</p>
+        <button class="btn-small" id="btnView">View Records</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Search Patient</h3>
+        <p>Quickly locate a patient's record using their patient ID.</p>
+        <button class="btn-small" id="btnSearch">Search Patient</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-trash-can"></i></div>
+        <h3>Delete Record</h3>
+        <p>Remove an existing patient record from local storage.</p>
+        <button class="btn-small" id="btnDelete">Delete Record</button>
+      </div>
+    </div>
+
+    <!-- PATIENT REGISTRATION -->
+    <section id="registerSection" class="content">
+      <div class="form">
+        <div class="form-header">
+          <div class="form-icon"><i class="fa-solid fa-user-plus"></i></div>
+          <div>
+            <h2>Patient Registration</h2>
+            <div class="muted">Enter the patient's details below.</div>
+          </div>
+        </div>
+
+        <form id="patientForm">
+          <label for="pid">Patient ID</label>
+          <input id="pid" type="number" required placeholder="e.g. 101">
+
+          <label for="pname">Full Name</label>
+          <input id="pname" type="text" required placeholder="Patient full name">
+
+          <div class="row">
+            <div>
+              <label for="page">Age</label>
+              <input id="page" type="number" min="0" required placeholder="e.g. 35">
+            </div>
+            <div style="flex:2 1 250px">
+              <label for="pdisease">Disease / Condition</label>
+              <input id="pdisease" type="text" required placeholder="e.g. Fever">
+            </div>
+          </div>
+
+          <label for="pdoctor">Doctor Assigned</label>
+          <input id="pdoctor" type="text" required placeholder="Doctor name">
+
+          <label for="pcontact">Contact Number</label>
+          <input id="pcontact" type="tel" required placeholder="e.g. 9876543210">
+
+          <div class="actions">
+            <button class="btn-small" type="submit">
+              <i class="fa-solid fa-check"></i> Register Patient
+            </button>
+            <button type="button" class="btn-small btn-secondary" id="backFromRegister">
+              <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+          </div>
+
+          <p class="success" id="regSuccess">
+            <i class="fa-solid fa-circle-check"></i> Patient registered successfully.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- VIEW RECORDS -->
+    <section id="viewSection" class="content">
+      <div class="form">
+        <div class="form-header">
+          <div class="form-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+          <div>
+            <h2>All Patients</h2>
+            <div class="muted">Currently stored patient records.</div>
+          </div>
+        </div>
+        <div id="recordsArea" class="muted">No records yet.</div>
+        <div class="actions">
+          <button class="btn-small btn-secondary" id="backFromView">
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section id="searchSection" class="content">
+      <div class="form">
+        <div class="form-header">
+          <div class="form-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div>
+            <h2>Search Patient</h2>
+            <div class="muted">Find a patient using their unique ID.</div>
+          </div>
+        </div>
+
+        <label for="searchId">Patient ID</label>
+        <input id="searchId" type="number" placeholder="e.g. 101">
+
+        <div class="actions">
+          <button class="btn-small" id="doSearch">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+          <button class="btn-small btn-secondary" id="backFromSearch">
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </button>
+        </div>
+
+        <div id="searchResult" style="margin-top:20px" class="muted">No result yet.</div>
+      </div>
+    </section>
+
+    <!-- DELETE -->
+    <section id="deleteSection" class="content">
+      <div class="form">
+        <div class="form-header">
+          <div class="form-icon"><i class="fa-solid fa-trash-can"></i></div>
+          <div>
+            <h2>Delete Patient</h2>
+            <div class="muted">Remove a patient record by ID.</div>
+          </div>
+        </div>
+
+        <label for="deleteId">Patient ID</label>
+        <input id="deleteId" type="number" placeholder="e.g. 101">
+
+        <div class="actions">
+          <button class="btn-small" id="doDelete" style="background:var(--danger)">
+            <i class="fa-solid fa-trash"></i> Delete
+          </button>
+          <button class="btn-small btn-secondary" id="backFromDelete">
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </button>
+        </div>
+
+        <div id="deleteMsg" style="margin-top:20px" class="muted">No action yet.</div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2026 CarePlus Hospital Management System · Designed by Alok Kumar Dangi
+    </div>
+  </main>
+</div>
+
+<!-- Link External Script -->
+<script src="script.js"></script>
+</body>
+</html>
