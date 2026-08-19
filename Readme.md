@@ -51,7 +51,7 @@ It provides an interactive dashboard for **patient registration, viewing records
 
 ## 👨‍⚕️ Patient Registration
 <p align="center">
-  <img src="Screenshot/Patient Registration.png" width="700">
+  <img src="Screenshot/Patient Registration .png" width="700">
 </p>
 
 ---
